@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React from "react";
+import ProductListingPage from "./pages/ProductListingPage";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header className="header">
+        <h1 className="logo">Shop</h1>
+        <div className="cart" title="View Cart">🛒</div>
       </header>
-    </div>
+
+      <ProductListingPage />
+
+      <footer className="footer">
+        © {new Date().getFullYear()} ShopEase. All rights reserved.
+      </footer>
+    </>
   );
 }
 
 export default App;
+
+
